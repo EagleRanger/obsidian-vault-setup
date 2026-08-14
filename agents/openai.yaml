@@ -1,0 +1,4 @@
+interface:
+  display_name: "Obsidian 本地数据库配置"
+  short_description: "不需要 API，一键建立本地 Vault、模板和 Bases"
+  default_prompt: "请使用 $obsidian-vault-setup 非破坏性配置我的 Obsidian 本地知识库，并运行验收。"
