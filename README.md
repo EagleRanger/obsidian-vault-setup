@@ -1,4 +1,3 @@
-
 # Obsidian 本地知识库自动配置
 
 `obsidian-vault-setup` 是一个面向 Codex 的本地 Skill，用来建立或补齐 Obsidian Vault 的目录骨架、核心插件配置、笔记模板与 Bases 数据库视图。
@@ -50,4 +49,3 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup-obsidian-vault
 ## 许可证
 
 [MIT](LICENSE)
-
