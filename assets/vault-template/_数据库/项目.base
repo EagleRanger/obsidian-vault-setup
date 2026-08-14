@@ -1,0 +1,36 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'type == "project"'
+properties:
+  file.name:
+    displayName: 项目
+  note.status:
+    displayName: 状态
+  note.owner:
+    displayName: 负责人
+  note.deadline:
+    displayName: 截止日期
+  file.mtime:
+    displayName: 最近修改
+views:
+  - type: table
+    name: 进行中
+    filters:
+      and:
+        - 'status != "done"'
+    order:
+      - file.name
+      - note.status
+      - note.owner
+      - note.deadline
+      - file.mtime
+  - type: table
+    name: 已完成
+    filters:
+      and:
+        - 'status == "done"'
+    order:
+      - file.name
+      - note.owner
+      - file.mtime
