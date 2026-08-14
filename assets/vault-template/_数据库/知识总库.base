@@ -1,0 +1,37 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - '!file.inFolder("_模板")'
+    - '!file.inFolder(".obsidian")'
+properties:
+  file.name:
+    displayName: 标题
+  note.type:
+    displayName: 类型
+  note.status:
+    displayName: 状态
+  note.source:
+    displayName: 来源
+  note.tags:
+    displayName: 标签
+  file.mtime:
+    displayName: 最近修改
+views:
+  - type: table
+    name: 全部知识
+    order:
+      - file.name
+      - note.type
+      - note.status
+      - note.source
+      - note.tags
+      - file.mtime
+  - type: table
+    name: 待整理
+    filters:
+      and:
+        - 'file.inFolder("01-收件箱")'
+    order:
+      - file.name
+      - note.status
+      - file.mtime
